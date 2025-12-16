@@ -1,0 +1,33 @@
+radar:
+  fc_hz: 24.0e9
+  bw_hz: 200.0e6
+  t_chirp_s: 1.0e-3
+  fs_hz: 2.0e6
+  n_chirps: 128
+  tx_power: 1.0
+
+processing:
+  window: "hann"
+  cfar:
+    guard: [2, 2]
+    train: [8, 8]
+    p_fa: 1.0e-4
+    snr_floor_db: 6.0
+
+tracking:
+  dt_s: 0.02
+  gate_m: 5.0
+
+fdtd:
+  dx: 0.01
+  dy: 0.01
+  dz: 0.01
+  nx: 100
+  ny: 80
+  nz: 80
+  dt: 1.0e-11
+  n_steps: 1200
+  npml: 10
+  pad: 6
+  f0_hz: 2.0e9
+  inc_amp: 1.0
